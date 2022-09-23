@@ -26,7 +26,7 @@ next.addEventListener('click', () => {
 
 back.addEventListener('click', () => {
     i--;
-    scroll(imageArray[i]);
+    scroll(imageArray[i - 1]);
     return i;
 })
 
