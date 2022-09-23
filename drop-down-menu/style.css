@@ -25,9 +25,16 @@ ul {
    display: flex;
    justify-content: space-around;
    list-style-type: none;
+
    
 }
 
 li {
     margin-top: 50px;
+
+}
+
+a {
+    text-decoration: none;
+    color:rgba(4, 17, 17);
 }
