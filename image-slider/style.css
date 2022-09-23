@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightgray;
 }
 
 .container {
@@ -25,3 +26,17 @@ img {
     margin: 0 400px;
 }
 
+#lizard {
+    width: 800px;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 2px;
+    padding: 2px;
+}
