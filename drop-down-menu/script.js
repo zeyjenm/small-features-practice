@@ -1,9 +1,12 @@
 const dropDowns = document.querySelectorAll('.drop-down');
+const container = document.querySelector('.header-dropdown-container');
 
 const clearAll = () => {dropDowns.forEach(function (dropDown) {
     dropDown.style.display = "none";
 });}
 clearAll();
+
+
 
 const dogs = document.querySelector('#dogs-h');
 
@@ -13,7 +16,7 @@ dogs.addEventListener('mouseenter', () => {
     dropDown.style.display = "contents";
 })
 
-dogs.addEventListener('mouseleave', () => {
+container.addEventListener('mouseleave', () => {
     clearAll();
 })
 
@@ -25,7 +28,7 @@ cats.addEventListener('mouseenter', () => {
     dropDown.style.display = "contents";
 })
 
-cats.addEventListener('mouseleave', () => {
+container.addEventListener('mouseleave', () => {
     clearAll();
 })
 
@@ -37,7 +40,7 @@ birds.addEventListener('mouseenter', () => {
     dropDown.style.display = "contents";
 })
 
-birds.addEventListener('mouseleave', () => {
+container.addEventListener('mouseleave', () => {
     clearAll();
 })
 
@@ -49,7 +52,7 @@ small.addEventListener('mouseenter', () => {
     dropDown.style.display = "contents";
 })
 
-small.addEventListener('mouseleave', () => {
+container.addEventListener('mouseleave', () => {
     clearAll();
 })
 
@@ -61,6 +64,6 @@ aquatic.addEventListener('mouseenter', () => {
     dropDown.style.display = "contents";
 })
 
-aquatic.addEventListener('mouseleave', () => {
+container.addEventListener('mouseleave', () => {
     clearAll();
 })
