@@ -7,3 +7,23 @@ images.forEach(function getImageArray (image) {
 })
 console.log(imageArray);
 
+
+function scroll (element) { 
+    element.scrollIntoView({
+    behavior: 'smooth'
+});
+}
+
+
+const buttons = document.querySelector('button');
+let i = 0;
+buttons.addEventListener('click', () => {
+    scroll(imageArray[i]);
+    i++;
+    return i;
+});
+
+
+
+
+

@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    width: 600px;
+    width: 800px;
     height: 600px;
     border: solid black 1px;
     overflow: hidden;
@@ -14,11 +14,12 @@ body {
 .images {
     width: 4000px;
     height: 600px;
-    display: flex;
+    
 }
 
 img {
     max-width: 600px;
     max-height: 600px;
-    margin: 0 100px;
+    margin: 0 400px;
 }
+
