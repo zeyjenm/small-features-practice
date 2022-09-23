@@ -2,7 +2,7 @@ const images = document.querySelectorAll('img');
 
 const imageArray = [];
 images.forEach(function getImageArray (image) {
-    imageArray.unshift(image);
+    imageArray.push(image);
     return imageArray;
 })
 console.log(imageArray);
@@ -15,15 +15,20 @@ function scroll (element) {
 }
 
 
-const buttons = document.querySelector('button');
+const next = document.querySelector('#next');
+const back = document.querySelector('#back');
 let i = 0;
-buttons.addEventListener('click', () => {
+next.addEventListener('click', () => {
     scroll(imageArray[i]);
     i++;
     return i;
 });
 
-
+back.addEventListener('click', () => {
+    i--;
+    scroll(imageArray[i]);
+    return i;
+})
 
 
 
