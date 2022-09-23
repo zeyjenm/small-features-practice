@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(53, 107, 107);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 16px;
+    justify-self: flex-start;
+    display: flex;
+}
+
+.drop-down {
+    background-color: rgb(53, 107, 107, 80%);
+    height: 120px;
+}
+
+ul {
+   display: flex;
+   justify-content: space-around;
+   list-style-type: none;
+   
+}
+
+li {
+    margin-top: 50px;
+}
