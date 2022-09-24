@@ -31,12 +31,18 @@ img {
     height: auto;
 }
 
-.buttons {
+.arrows {
     display: flex;
     flex-direction: column;
 }
 
-button {
+.arrows button {
     margin: 2px;
     padding: 2px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 16px;
+    width: 8px;
 }
