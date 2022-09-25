@@ -30,13 +30,12 @@ countryInput.addEventListener('input', () => {
     }
 });
 
-postcodeInput.addEventListener('input', (e) => {
-    e.preventDefault();
-    if (postcodeInput.validity.rangeUnderflow) {
+postcodeInput.addEventListener('input', () => {
+    if (postcodeInput.value.length <= 3) {
         postcodeInput.setCustomValidity("Please enter a valid four digit postcode.");
         postcodeInput.reportValidity();
     }
-    else if (postcodeInput.validity.rangeOverflow) {
+    else if (postcodeInput.value.length >= 5) {
         postcodeInput.setCustomValidity("Please enter a valid four digit postcode.");
         postcodeInput.reportValidity();
     }
@@ -45,3 +44,40 @@ postcodeInput.addEventListener('input', (e) => {
 
     }
 });
+
+passwordInput.addEventListener('input', (e) => {
+    e.preventDefault();
+    if (passwordInput.value.length <= 5) {
+        passwordInput.setCustomValidity("Please enter a password more than 6 characters long.");
+        passwordInput.reportValidity();
+    }
+    else if (passwordInput.value.length >= 20) {
+        passwordInput.setCustomValidity("Please enter a password less than 20 characters long.");
+        passwordInput.reportValidity();
+    }
+    else if (/[a-z]/.test(passwordInput.value) == false) {
+        passwordInput.setCustomValidity("Please enter a password containing at least one letter.");
+        passwordInput.reportValidity();
+    }
+    else if (/\W/.test(passwordInput.value) == false) {
+        passwordInput.setCustomValidity("Please enter a password containing at least one special character.");
+        passwordInput.reportValidity();
+    }
+    else if (/\d/.test(passwordInput.value) == false) {
+        passwordInput.setCustomValidity("Please enter a password containing at least one number.");
+        passwordInput.reportValidity();
+    }
+    else {
+        passwordInput.setCustomValidity('');
+    }
+})
+
+confirmInput.addEventListener('input', () => {
+    if (confirmInput.value != passwordInput.value) {
+        confirmInput.setCustomValidity("Passwords do not match.");
+        confirmInput.reportValidity();
+    }
+    else {
+        confirmInput.setCustomValidity('');
+    }
+})
