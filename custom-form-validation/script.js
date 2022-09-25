@@ -67,6 +67,10 @@ passwordInput.addEventListener('input', (e) => {
         passwordInput.setCustomValidity("Please enter a password containing at least one number.");
         passwordInput.reportValidity();
     }
+    else if (passwordInput.value == "") {
+        passwordInput.setCustomValidity("Please enter a password.");
+        passwordInput.reportValidity();
+    }
     else {
         passwordInput.setCustomValidity('');
     }
