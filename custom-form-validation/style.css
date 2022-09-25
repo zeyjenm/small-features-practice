@@ -9,4 +9,35 @@ label {
 
 input {
     margin: 5px;
+    border-radius: 5%;
+}
+
+input:valid {
+    outline: 2px solid rgb(90, 247, 90);
+    border-radius: 5%;
+    border: 1px solid rgb(0, 0, 0, 40%);
+}
+
+input:valid + span::after {
+    content: "✓";
+    font-weight: 600;
+    font-size: 18px;
+    color:rgb(90, 247, 90);
+}
+
+input:invalid {
+    outline: 2px solid rgb(245, 56, 56);
+    border-radius: 5%;
+    border: 1px solid rgb(0, 0, 0, 40%);
+}
+
+input:invalid + span::after {
+    content: "x";
+    font-weight: 600;
+    font-size: 18px;
+    color:rgb(245, 56, 56);
+}
+
+span {
+    position: relative;
 }
